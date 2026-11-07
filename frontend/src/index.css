@@ -1,0 +1,93 @@
+@import "tailwindcss";
+@import "@xyflow/react/dist/style.css";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --color-ink-50: #f4f6fc;
+  --color-ink-100: #e7ecf7;
+  --color-ink-200: #c9d2e6;
+  --color-ink-300: #a3afc9;
+  --color-ink-400: #7d8aa8;
+  --color-ink-500: #5d6a86;
+  --color-navy-950: #070b16;
+  --color-navy-900: #0b1120;
+  --color-navy-850: #0e1629;
+  --color-navy-800: #121b30;
+  --color-navy-700: #1a2640;
+  --color-navy-600: #26355a;
+  --color-accent: #8c9bff;
+  --color-accent-strong: #6d7ff7;
+  --color-teal: #39c8d5;
+  --color-mint: #5fe0b8;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink-100);
+  background-color: var(--color-navy-900);
+  background-image:
+    radial-gradient(circle at 85% -10%, rgba(109, 127, 247, 0.22), transparent 38%),
+    radial-gradient(circle at 0% 100%, rgba(57, 200, 213, 0.1), transparent 34%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(140, 155, 255, 0.35);
+}
+
+input,
+textarea,
+select {
+  color-scheme: dark;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-navy-600) transparent;
+}
+
+.react-flow {
+  background: transparent;
+}
+
+.react-flow__attribution {
+  display: none;
+}
+
+.react-flow__minimap {
+  background: var(--color-navy-850) !important;
+}
+
+.react-flow__controls-button {
+  background: var(--color-navy-800) !important;
+  border-color: var(--color-navy-600) !important;
+  fill: var(--color-ink-200) !important;
+}
+
+.react-flow__edge-path {
+  stroke-width: 1.6;
+}
+
+@keyframes rm-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: rm-fade-up 260ms ease-out both;
+}
